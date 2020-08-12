@@ -1,22 +1,26 @@
 class ActionProvider {
-    constructor(createChatBotMessage, setStateFunc) {
-      this.createChatBotMessage = createChatBotMessage;
-      this.setState = setStateFunc;
-    }
-  
+  constructor(createChatBotMessage, setStateFunc) {
+    this.createChatBotMessage = createChatBotMessage;
+    this.setState = setStateFunc;
+  }
+
   greet() {
-      const greetingMessage = this.createChatBotMessage("Hello human, how are you?")
-      this.updateChatbotState(greetingMessage)
+    const greetingMessage = this.createChatBotMessage(
+      "Hello human, how are you?"
+    );
+    this.updateChatbotState(greetingMessage);
   }
 
   feeling() {
-    const feelingMessage = this.createChatBotMessage("I'm great thank you for asking! What can I help you with today?")
-    this.updateChatbotState(feelingMessage)
+    const feelingMessage = this.createChatBotMessage(
+      "I'm great thank you for asking! What can I help you with today?"
+    );
+    this.updateChatbotState(feelingMessage);
   }
 
   unknown() {
-      const whatDidYouSay = this.createChatBotMessage("I don't understand.")
-      this.updateChatbotState(whatDidYouSay)
+    const whatDidYouSay = this.createChatBotMessage("I don't understand.");
+    this.updateChatbotState(whatDidYouSay);
   }
 
   handleJavascriptList = () => {
@@ -75,11 +79,12 @@ class ActionProvider {
   };
 
   updateChatbotState(message) {
-      // This function is set in the constructor and is passed in from the top level component. 
-      // The setstate function here actually manipulates the top level state of chatbot so it is important to make sure we preserve previous state.
-      this.setState(prevState => ({
-          ...prevState, messages: [...prevState.messages, message]
-      }))
+    // This function is set in the constructor and is passed in from the top level component.
+    // The setstate function here actually manipulates the top level state of chatbot so it is important to make sure we preserve previous state.
+    this.setState((prevState) => ({
+      ...prevState,
+      messages: [...prevState.messages, message],
+    }));
   }
 }
 export default ActionProvider;
