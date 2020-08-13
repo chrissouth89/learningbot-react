@@ -10,6 +10,7 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
+        <title>Learning Time</title>
         <Chatbot
           config={config}
           actionProvider={ActionProvider}
