@@ -153,8 +153,8 @@ const config = {
             props: {
               options: [
                 {
-                  text: "Help",
-                  url: "",
+                  text: "help",
+                  url: "You can use the buttons or type in the message box to get information on any of the topics that I have available!",
                   id: 1,
                 },
               ],

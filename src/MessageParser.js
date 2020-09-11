@@ -10,7 +10,7 @@ class MessageParser {
     if (lowerCaseMessage.includes("hello")) {
       this.actionProvider.greet();
     } else if (lowerCaseMessage.includes("help")) {
-      this.actionProvider.help();
+      this.actionProvider.handleHelp();
     } else if (lowerCaseMessage.includes("how are you?")) {
       this.actionProvider.feeling();
     } else if (lowerCaseMessage.includes("javascript")) {

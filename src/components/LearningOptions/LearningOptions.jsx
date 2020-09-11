@@ -29,6 +29,11 @@ const LearningOptions = (props) => {
       handler: props.actionProvider.handleInterviewPrepList,
       id: 5,
     },
+    {
+      text: "Help",
+      handler: props.actionProvider.handleHelp,
+      id: 6,
+    },
   ];
 
   const optionsMarkup = options.map((option) => (
