@@ -16,6 +16,7 @@ class ActionProvider {
       "You can use the buttons or type in the message box to get information on any of the topics that I have available!"
     )
   }
+  
   feeling() {
     const feelingMessage = this.createChatBotMessage(
       "I'm great thank you for asking! What can I help you with today?"

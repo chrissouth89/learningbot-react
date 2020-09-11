@@ -147,6 +147,19 @@ const config = {
               "https://www.amazon.com/Cracking-Coding-Interview-Programming-Questions/dp/0984782850",
             id: 3,
           },
+          {
+            widgetName: "help",
+            widgetFunc: (props) => <LinkList {...props} />,
+            props: {
+              options: [
+                {
+                  text: "Help",
+                  url: "",
+                  id: 1,
+                },
+              ],
+            },
+          },
         ],
       },
     },
